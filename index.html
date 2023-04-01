@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalho DIW</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <div class="row p-1 align-items-center"> <!--cabeçalho-->
+        <div class="col-2">
+            <a href="imain.html">
+                <img src="img/21.png" class="img-thumbnail" alt="...">
+            </a>
+        </div> <!--logo-->
+        <div class="col-6 mt-4 "> <!--pesquisa-->
+            <h2>Bem vindo(a)!</h2>
+            <div class="row mt-4"></div>
+            <div class="input-group">
+                <input type="text" class="form-control bg-light" placeholder="Pesquisar" aria-label="Pesquisar">
+                <button class="btn btn-secondary" type="button">
+                    <i class="bi bi-search"></i> <!-- ícone de lupa -->
+                </button>
+            </div>
+        </div>
+        <div class="col-4 p-8">
+            <ul class="nav justify-content-end"> <!--itens-->
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Entrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Registrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Minha conta</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Acompanhar Pedido</a>
+                </li>
+            </ul>
+            <div class="col-9">
+                <div class="row align-items-center">
+                    <div class="col-sm-8">
+                        <p class="text-center">
+                        <h6 class="font-italic">Envio imediato | Garantia de 30 dias</h6>
+                        </p>
+                        <p class="text-center">
+                        <h6 class="font-italic">Atendimento ao cliente 0800 705 101</h6>
+                        </p>
+                    </div>
+                    <div class="col-sm-4 d-flex justify-content-center justify-content-sm-end">
+                        <a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2">
+                            <img src="img/Meu carinho (1).png" class="img-thumbnail" alt="...">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--filtro-->
+        <div class="col-2 border bg-light">
+            <p class="text-center fs-4"><b>Pesquisa rápida</b></p>
+            <p class="text-center fs-5">Encontre o produto certo pelo preço certo!</p>
+            <select class="form-select form-select-sm mb-3" aria-label="Default select example">
+                <option selected>Tipo</option>
+                <option value="1">Relógio</option>
+                <option value="2">Fone</option>
+                <option value="3">Carregador</option>
+                <option value="4">Garrafa</option>
+            </select>
+            <select class="form-select form-select-sm mb-3" aria-label="Default select example">
+                <option selected>Marca</option>
+                <option value="1">D20</option>
+                <option value="2">JBL</option>
+                <option value="3">Watch 8</option>
+                <option value="4">Y18</option>
+            </select>
+            <select class="form-select form-select-sm mb-3" aria-label="Default select example">
+                <option selected>Categoria</option>
+                <option value="1">Criança</option>
+                <option value="2">Jovens</option>
+                <option value="3">Adulto</option>
+                <option value="4">Idoso</option>
+            </select>
+            <div class="row g-2">
+                <div class="col-md">
+                    <div class="form-floating">
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="floatingInputGrid" placeholder="Mín.">
+                        </div>
+                        <label for="floatingInputGrid"></label>
+                    </div>
+                </div>
+                <div class="col-md">
+                    <div class="form-floating">
+                        <div class="input-group">
+                            <span class="input-group-text">$</span>
+                            <input type="number" class="form-control" id="floatingInputGrid" placeholder="Máx.">
+                        </div>
+                        <label for="floatingInputGrid"></label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4"></div>
+            <div class="d-grid gap-3 col-10 mx-auto">
+                <div class="input-group">
+                    <input type="text" class="form-control bg-light" placeholder="Pesquisar" aria-label="Pesquisar">
+                    <button class="btn btn-secondary" type="button">
+                        <i class="bi bi-search"></i> <!-- ícone de lupa -->
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-4"></div>
+        </div>
+        <!-- Carrousel -->
+        <div id="carouselExampleCaptions" class="carousel slide col-10 ms-auto" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="img/11.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/12.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/13.png" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev d-md-none" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next d-md-none" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+        <!--CARD-->
+        <div class="container">
+            <div class="row">
+                <div class="col "><!--CARD 1° COLUNA INICIO-->
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/1.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Relógio smartwatch
+                                    D18</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$50,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$100,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/7.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Fone bluetooth X25</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$70,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$140,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/MAQUINA CABELO.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">MÁquina Vintage T9</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$55,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$110,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--CARD 1° COLUNA FINAL-->
+                <div class="col-md-3"><!--CARD 2° COLUNA-->
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/2.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Relógio smartwatch
+                                    8 Pro</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$90,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$180,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/fone branco.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Fone bluetooth I7
+                                    Mini</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$40,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$80,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/MASSAGEM.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Aparelho de massageador
+                                    elétrico</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$60,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$120,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--CARD 3° COLUNA-->
+                <div class="col-md-3">
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/3.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Relógio smartwatch
+                                    FD68s</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$50,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$100,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/8.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Fone bluetooth Y50</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                    <i class="bi bi-star text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$40,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$80,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card" style="width: 23rem;">
+                        <img class="card-img-top" src="img/4.png" alt="Card image cap">
+                        <div class="card-body">
+                            <div class="d-flex flex-column">
+                                <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Garrafa c/ Sensor
+                                    temperatura</a>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <p class="card-text h4 font-weight-bold">R$45,00</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="card-text"><del>R$90,00</del> 50% OFF</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 mt-5"> <!--card lateral com 5-->
+                    <div class="row mt-4"></div>
+                    <div class="row mt-4"></div>
+                    <div class="card mb-3 border bg-light mt-2" style="max-width: 640px;">
+                        <h4 class="card-title text-center">Produtos em Destaque</h4>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 border-bottom">
+                                    <img src="img/1.png" class="img-fluid rounded-start" alt="...">
+                                    <div class="row mt-4"></div>
+                                </div>
+                                <div class="col-md-8 border-bottom">
+                                    <div class="card-body">
+                                        <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Relógio
+                                            smartwatch D18</a>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star text-warning"></i>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text h4 font-weight-bold">R$50,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 border-bottom">
+                                    <img src="img/2.png" class="img-fluid rounded-start" alt="...">
+                                    <div class="row mt-4"></div>
+                                </div>
+                                <div class="col-md-8 border-bottom">
+                                    <div class="card-body">
+                                        <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Relógio
+                                            smartwatch 8 Pro</a>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text h4 font-weight-bold">R$90,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 border-bottom">
+                                    <img src="img/3.png" class="img-fluid rounded-start" alt="...">
+                                    <div class="row mt-4"></div>
+                                </div>
+                                <div class="col-md-8 border-bottom">
+                                    <div class="card-body">
+                                        <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Relógio
+                                            smartwatch FD68s</a>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text h4 font-weight-bold">R$50,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4"></div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4 border-bottom">
+                                    <img src="img/4.png" class="img-fluid rounded-start" alt="...">
+                                    <div class="row mt-4"></div>
+                                </div>
+                                <div class="col-md-8 border-bottom">
+                                    <div class="card-body">
+                                        <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Garrafa c/
+                                            Sensor temperatura</a>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text h4 font-weight-bold">R$45,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-md-4">
+                                    <img src="img/MASSAGEM.png" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <a href="#" class="card-link text-decoration-none fs-5 fw-bold">Aparelho de
+                                            massageador elétrico</a>
+                                        <div class="d-flex align-items-center">
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                            <i class="bi bi-star-fill text-warning"></i>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <p class="card-text h4 font-weight-bold">R$60,00</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="card mb-3 border bg-light" style="max-width: 540px;"> <!--card com botão-->
+                        <div class="card-body text- float-left">
+                            <h5 class="card-title">Quer descontos por email?</h5>
+                            <p class="card-text">Cadastre-se para receber as melhores promoções, cupons de desconto e
+                                ofertas exclusivas!</p>
+
+                            <form class="form-floating">
+                                <input type="email" class="form-control" id="floatingInputValue"
+                                    placeholder="name@example.com">
+                                <label for="floatingInputValue">nome@exemplo.com</label>
+                                <div class="row mt-4"></div>
+                                <button type="submit" class="btn btn-primary" style="float: right;">Inscrever</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4"></div>
+        <footer class="bg-light py-5"><!--RODAPE-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <h5>Formas de pagamento</h5>
+                        <ul class="list-unstyled">
+                            <li><i class=></i> <img src="img/Design sem nome (1).png" alt="Mastercard"></li>
+                            <li><i class=></i> <img src="img/pix.png" alt="Pix"></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Links úteis</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Ajuda</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Sobre nós</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Serviços</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Contato</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Home</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Sobre nós</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Serviços</a></li>
+                            <li><a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2"
+                                    class="text-decoration-none">Contato</a></li>
+
+                        </ul>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Nossas rede sociais</h5>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a
+                                    href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2">
+                                    <img src="img/icone redes.png" alt="rede social">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3">
+                        <h5>Nossos contatos</h5>
+                        <ul class="list-unstyled">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-facebook"></i> Betim / MG</li>
+                                <li><i class="fa fa-twitter"></i> Brasil</li>
+                                <li><i class="bi bi-phone"></i> 0800 705 101</li>
+
+                                <a href="mailto:matheusantaosilva18@gmail.com" class="text-decoration-none"><i
+                                        class="bi bi-envelope"></i> matheusantaosilva18@gmail.com</a>
+                                </li>
+                            </ul>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+    <div class="row mt-12">
+        <div class="col-md-12 text-center">
+            <p class="mb-0 text-bg-dark">
+                Copyright &copy; 2023
+                <a href="https://www.canva.com/design/DAFMxcNVZRw/r335fVDod9EcEi_QLTQ8Jw/view?website#2" target="_blank"
+                    style="text-decoration:none;">Empresa virtual Matheus
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
